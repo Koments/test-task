@@ -42,6 +42,9 @@ export const HeaderIcon = styled.div`
   height: 26px;
 `;
 
+export const LogoIcon = styled.img``;
+  
+
 export const HeaderBtnContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -72,7 +75,11 @@ export const BannerContainer = styled.div`
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
-  }
+  };
+
+  @media (min-width: 1024px) {
+    height: 650px;
+  };
 `;
 
 export const Banner = styled.div`
@@ -81,6 +88,7 @@ export const Banner = styled.div`
 
   @media (min-width: 361px) {
     width: 380px;
+    padding: 72px 16px 71px;
   };
 `;
 
@@ -106,14 +114,4 @@ export const ActivBtn = styled.button`
   &:hover {
     background-color: #ffe302;
   };
-`;
-
-export const DisableBtn = styled.button`
-  width: 100px;
-  height: 34px;
-  border-radius: 80px;
-  background-color: #f4e041;
-  border: none;
-  background-color: #b4b4b4;
-  color: white;
 `;

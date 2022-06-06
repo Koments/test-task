@@ -1,27 +1,8 @@
-import { useEffect, useState } from 'react';
+import { GetRequestStyles, UsersContainer, UserCard, Icon, UserName, TextClipping, PagesBtn, NextPageBtn, DisableBtn  } from './styled-components';
 
-import { ActivBtn, DisableBtn } from '../app/styled-components';
-import { GetRequestStyles, UsersContainer, UserCard, Icon, UserName, TextClipping, PagesBtn } from './styled-components';
+export function GetRequest(props) {
 
-export function GetRequest() {
-
-    const [result, setResult] = useState([]);
-    const [page, SetPage] = useState(1);
-
-    async function fetchUserJSON() {
-        const response = await fetch(
-            `https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${page}&count=6`
-        );
-        const result = await response.json();
-        return result;
-    }
-
-    useEffect(() => {
-        fetchUserJSON().then((result) => {
-            setResult(result)
-        });
-    }, [page]);
-
+    const { result } = props;
 
     if (result.page !== undefined) {
 
@@ -47,7 +28,15 @@ export function GetRequest() {
                         ))}
                     </UsersContainer>
                 </div>
-                <PagesBtn>{page + 1 <= result.total_pages ? <ActivBtn onClick={() => SetPage(page + 1)}>Show more</ActivBtn> : <DisableBtn >Show more</DisableBtn>}</PagesBtn>
+                <PagesBtn>
+                    {
+                        result.page + 1 <= result.total_pages
+                            ?
+                            <NextPageBtn onClick={() => { props.nextPage() }}>Show more</NextPageBtn >
+                            :
+                            <DisableBtn >Show more</DisableBtn>
+                    }
+                </PagesBtn>
             </GetRequestStyles>
         )
     }

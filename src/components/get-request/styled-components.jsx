@@ -5,19 +5,19 @@ export const GetRequestStyles = styled.div`
 
   h2 {
     margin-bottom: 50px;
-  }
+  };
 
   @media (min-width: 361px) and (max-width: 768px) {
     margin: 140px 32px;
-  }
+  };
 
-  @media (min-width: 768px) and (max-width: 1024px) {
-    margin: 140px 32px;
-  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    margin: 140px 60px;
+  };
 
   @media (min-width: 1025px) {
     margin: 140px 0px;
-  } ;
+  };
 `;
 
 export const Icon = styled.img`
@@ -28,7 +28,7 @@ export const Icon = styled.img`
 `;
 
 export const UsersContainer = styled.div`
-  row-gap: 16px;
+  row-gap: 20px;
   column-gap: 16px;
   display: flex;
   flex-direction: column;
@@ -37,16 +37,15 @@ export const UsersContainer = styled.div`
   @media (min-width: 768px) and (max-width: 1023px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 29px;
-    column-gap: 29px;
-  }
+    row-gap: 16px;
+  };
 
   @media (min-width: 1024px) {
     row-gap: 29px;
     column-gap: 29px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  } ;
+  };
 `;
 
 export const UserCard = styled.div`
@@ -63,14 +62,18 @@ export const UserCard = styled.div`
   border-radius: 10px;
   white-space: pre;
 
-  @media (min-width: 768px) and (max-width: 2559px) {
-    width: 90%;
-  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 304px;
+  };
+
+  @media (min-width: 1024px) and (max-width: 2559px) {
+    width: 242px;
+  };
 
   @media (min-width: 2560px) {
     margin: inherit;
     width: 330px;
-  } ;
+  };
 `;
 
 export const UserName = styled.div`
@@ -92,4 +95,27 @@ export const PagesBtn = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 50px;
+`;
+
+export const NextPageBtn = styled.button`
+  width: 120px;
+  height: 34px;
+  border-radius: 80px;
+  background-color: #f4e041;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ffe302;
+  };
+`;
+
+export const DisableBtn = styled.button`
+  width: 120px;
+  height: 34px;
+  border-radius: 80px;
+  background-color: #f4e041;
+  border: none;
+  background-color: #b4b4b4;
+  color: white;
 `;

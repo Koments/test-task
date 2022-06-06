@@ -1,17 +1,29 @@
-import { ActivBtn, Container, Header, HeaderContainer, HeaderIcon, HeaderBtnContainer, Main, BannerContainer, Banner } from './styled-components'
-import { GetRequest } from '../get-request/index'
-import { PostRequest } from '../post-request/index'
+import { useState, useEffect } from 'react';
+import { ActivBtn, Container, Header, HeaderContainer, HeaderIcon, LogoIcon, HeaderBtnContainer, Main, BannerContainer, Banner } from './styled-components';
+import { GetRequest } from '../get-request/index';
+import { PostRequest } from '../post-request/index';
+import { fetchUserJSON } from '../../utils/utils';
 
 export function App() {
+    const [result, setResult] = useState({});
+    const [page, setPage] = useState(1);
+    
+    useEffect(() => {
+        fetchUserJSON(1).then((result) => {
+            setResult(result);
+        });
+    }, []);
 
     return (
         <Container>
             <Header>
                 <HeaderContainer>
-                    <HeaderIcon><img src='icons/Logo.svg' alt="logo" /></HeaderIcon>
+                    <HeaderIcon>
+                        <LogoIcon src='icons/Logo.svg' alt="logo" />
+                    </HeaderIcon>
                     <HeaderBtnContainer>
                         <ActivBtn>Users</ActivBtn>
-                        <ActivBtn>Sing up</ActivBtn>
+                        <ActivBtn>Sign up</ActivBtn>
                     </HeaderBtnContainer>
                 </HeaderContainer>
             </Header>
@@ -23,8 +35,18 @@ export function App() {
                         <ActivBtn>Sign up</ActivBtn>
                     </Banner>
                 </BannerContainer>
-                <GetRequest />
-                <PostRequest />
+                <GetRequest result={result} nextPage={async () => {
+                    
+                    const newPage = page + 1;
+                    setPage(newPage);
+                    const result = await fetchUserJSON(newPage);
+                    setResult(result);
+                }} />
+                <PostRequest onSuccess={async () => {
+
+                    const result = await fetchUserJSON(1);
+                    setResult(result);
+                }} />
             </Main>
         </Container>
     )
