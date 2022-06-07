@@ -9,7 +9,7 @@ export const PostRequestStyles = styled.div`
     display: flex;
     justify-content: center;
     margin: 0;
-  } ;
+  };
 `;
 
 export const PostTitle = styled.h2`
@@ -18,7 +18,7 @@ export const PostTitle = styled.h2`
     width: 704px;
     text-align: center;
     margin: 0 16px;
-  } ;
+  };
 `;
 
 export const FormContainer = styled.div`
@@ -27,7 +27,7 @@ export const FormContainer = styled.div`
 
   @media (min-width: 768px) {
     align-items: center;
-  }
+  };
 `;
 export const PersonalInfoContailer = styled.div`
   color: #7e7e7e;
@@ -48,11 +48,11 @@ export const InfoInput = styled.input`
 
   @media (min-width: 768px) and (max-width: 2559px) {
     width: 348px;
-  }
+  };
 
   @media (min-width: 2560px) {
     width: 350px;
-  } ;
+  };
 `;
 
 export const FlexColumn = styled.div`
@@ -70,7 +70,7 @@ export const PositionContainer = styled.div`
 
   @media (min-width: 768px) {
     width: 380px;
-  }
+  };
 `;
 
 export const PositionTitle = styled.div`
@@ -88,7 +88,7 @@ export const RadioBtnsContainer = styled.div`
     accent-color: rgba(0, 160, 211, 1);
     border: 1px solid #00bdd3;
     margin-right: 12px;
-  }
+  };
 `;
 
 export const UploadFilesContainer = styled.div`
@@ -102,11 +102,11 @@ export const UploadFilesContainer = styled.div`
 
   @media (min-width: 768px) and (max-width: 2559px) {
     width: 378px;
-  }
+  };
 
   @media (min-width: 2560px) {
     width: 380px;
-  } ;
+  };
 `;
 
 export const UploadBtnContainer = styled.div`
@@ -120,11 +120,11 @@ export const UploadBtnContainer = styled.div`
 
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 81px;
-  }
+  };
 
   @media (min-width: 2560px) {
     width: 80px;
-  } ;
+  };
 `;
 
 export const UploadLabel = styled.label`
@@ -169,12 +169,12 @@ export const PostBtnContainer = styled.div`
   @media screen and (max-width: 768px) {
     display: flex;
     justify-content: center;
-  }
+  };
 
   @media (min-width: 768px) {
     display: flex;
     justify-content: center;
-  } ;
+  };
 `;
 
 export const SuccessPost = styled.img`
