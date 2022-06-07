@@ -71,6 +71,7 @@ export const PositionContainer = styled.div`
   @media (min-width: 768px) {
     width: 380px;
   };
+  
 `;
 
 export const PositionTitle = styled.div`
