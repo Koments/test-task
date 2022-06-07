@@ -64,7 +64,8 @@ export const BannerContainer = styled.div`
   text-align: center;
   background-color: rgba(0, 0, 0, 0.3);
   position: relative;
-  background-position: 50% 73.3%;
+  background-position: 50% 85.3%;
+  background-size: 340% 218%;
 
   &:after {
     content: "";
