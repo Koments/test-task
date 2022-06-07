@@ -55,7 +55,7 @@ export const BannerContainer = styled.div`
   height: 500px;
   width: 100%;
   margin: 0 auto;
-  background-image: url("icons/second-banner.jpg");
+  background-image: url("icons/banner.jpg");
   color: white;
   display: flex;
   justify-content: center;
