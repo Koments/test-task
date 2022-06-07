@@ -19,7 +19,7 @@ export function App() {
             <Header>
                 <HeaderContainer>
                     <HeaderIcon>
-                        <LogoIcon src='icons/Logo.svg' alt="logo" />
+                        <LogoIcon  src='icons/Logo.svg' alt="logo" />
                     </HeaderIcon>
                     <HeaderBtnContainer>
                         <ActivBtn>Users</ActivBtn>

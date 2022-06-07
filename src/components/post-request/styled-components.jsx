@@ -13,6 +13,7 @@ export const PostRequestStyles = styled.div`
 `;
 
 export const PostTitle = styled.h2`
+  text-align: center;
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 704px;
     text-align: center;
@@ -65,7 +66,11 @@ export const LabelPhone = styled.label`
   margin: 4px 0 0 20px;
 `;
 export const PositionContainer = styled.div`
-  width: 380px;
+  width: 328px;
+
+  @media (min-width: 768px) {
+    width: 380px;
+  }
 `;
 
 export const PositionTitle = styled.div`
@@ -132,7 +137,7 @@ export const UploadLabel = styled.label`
 `;
 
 export const UploadBtn = styled.input`
-  width: 83px;
+  width: 100%;
   height: 54px;
   position: absolute;
   visibility: hidden;

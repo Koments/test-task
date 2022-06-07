@@ -1,4 +1,4 @@
-import { GetRequestStyles, UsersContainer, UserCard, Icon, UserName, TextClipping, PagesBtn, NextPageBtn, DisableBtn  } from './styled-components';
+import { GetRequestStyles, GetRequestTitle, UsersContainer, UserCard, Icon, UserName, TextClipping, PagesBtn, NextPageBtn, DisableBtn  } from './styled-components';
 
 export function GetRequest(props) {
 
@@ -14,7 +14,7 @@ export function GetRequest(props) {
 
         return (
             <GetRequestStyles>
-                <h2>Working with GET request</h2>
+                <GetRequestTitle>Working with GET request</GetRequestTitle>
                 <div>
                     <UsersContainer>
                         {users.map((user, index) => (

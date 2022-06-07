@@ -3,21 +3,22 @@ import styled from "@emotion/styled";
 export const GetRequestStyles = styled.div`
   margin: 140px 16px;
 
-  h2 {
-    margin-bottom: 50px;
-  };
-
-  @media (min-width: 361px) and (max-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     margin: 140px 32px;
-  };
+  }
 
-  @media (min-width: 769px) and (max-width: 1024px) {
+  @media (min-width: 1024px) and (max-width: 2559px) {
     margin: 140px 60px;
-  };
+  }
 
-  @media (min-width: 1025px) {
+  @media (min-width: 2560px) {
     margin: 140px 0px;
-  };
+  } ;
+`;
+
+export const GetRequestTitle = styled.h2`
+  margin-bottom: 50px;
+  text-align: center;
 `;
 
 export const Icon = styled.img`

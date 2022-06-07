@@ -55,7 +55,7 @@ export const BannerContainer = styled.div`
   height: 500px;
   width: 100%;
   margin: 0 auto;
-  background: url(/icons/pexels-alexandr-podvalny-1227513.jpeg);
+  background-image: url("icons/second-banner.jpg");
   color: white;
   display: flex;
   justify-content: center;
@@ -75,18 +75,18 @@ export const BannerContainer = styled.div`
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
-  };
+  }
 
   @media (min-width: 1024px) {
     height: 650px;
-  };
+  } ;
 `;
 
 export const Banner = styled.div`
   z-index: 1;
   padding: 40px 16px 71px;
 
-  @media (min-width: 361px) {
+  @media (min-width: 768px) {
     width: 380px;
     padding: 72px 16px 71px;
   };
